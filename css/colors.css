@@ -1,0 +1,101 @@
+/*border colors*/
+.blueBdr {
+	border:1px solid #10a0b6;
+}
+
+.yellowBdr {
+	border:1px solid #F49D2C;
+}
+
+.greenBdr {
+	border:1px solid #42ae18;
+}
+
+.redBdr {
+	border:1px solid #d74726;
+}
+
+.purpleBdr {
+	border:1px solid #8d33aa;
+}
+
+.orangeBdr {
+	border:1px solid #e9681b;
+}
+/*end border colors*/
+
+/*colors*/
+.white {
+	color:#FFF; 
+}
+
+.blue {
+	color:#10a0b6;
+}
+
+.yellow {
+	color:#F49D2C;
+}
+
+.green {
+	color:#42ae18;
+}
+
+.red {
+	color:#d74726;
+}
+
+.purple {
+	color:#8d33aa;
+}
+
+.orange {
+	color:#e9681b;
+}
+/*end colors*/
+
+/*bg colors*/
+.bluebg, .blue::after{
+	background-color:#10a0b6;
+}
+
+.yellowbg, .yellow::after{
+	background-color:#F49D2C;
+}
+
+.greenbg, .green::after {
+	background-color:#42ae18;
+}
+
+.redbg, .red::after {
+	background-color:#d74726;
+}
+
+.purplebg, .purple::after {
+	background-color:#8d33aa;
+}
+
+.orangebg, .orange::after {
+	background-color:#e9681b;
+}
+/*end bg colors*/
+
+/*bg hover colors*/
+a.register.bluebg:hover, a.register.blueBdr:hover{
+	background-color:#51BACA;
+}
+
+a.register.redbg:hover, a.register.redBdr:hover{
+	background-color:#DE684D;
+}
+
+a.register.blueBdr:hover {
+	color:#FFF;
+	border:1px solid #51BACA;
+}
+
+a.register.redBdr:hover {
+	color:#FFF;
+	border:1px solid #DE684D;
+}
+/*bg hover colors*/

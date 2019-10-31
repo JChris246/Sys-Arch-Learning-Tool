@@ -1,0 +1,282 @@
+body {
+	font-family: Calibri, arial, helvetica, sans-serif;
+	background-color:white;
+	font-size:16px;
+	margin:0;
+}
+
+header {	
+	margin:4px;
+	padding-top:10px;
+}
+
+img {
+	padding:10px;
+}
+
+h1 {
+	font-size:32px;	
+	font-family:  sans-serif, Calibri, arial, helvetica;
+	margin:5px;
+	padding-left:85px;
+}
+
+h2 {
+	font-size:28px;	
+	font-family:  sans-serif, Calibri, arial, helvetica;
+	text-align:center;
+	margin:0;
+}
+
+h2::after {
+	content: " ";
+	border-radius: 6px;
+	display: block;
+	height: 3px;
+	width: 70px;
+	margin: 10px auto 10px auto;
+}
+
+#container {
+	height:100%;
+	position:relative;
+}
+
+#main {
+	padding-bottom:20px;
+ 	line-height: 1.4;
+ 	min-height:80px;
+	background-size: cover;
+	padding-top: 45px;
+}
+
+#search {
+	padding-left:15px;
+	display:inline-block;
+}
+
+#searchBtn {
+	background: transparent url("../resources/search.svg") 50% 50% no-repeat;    
+    background-size: 18px 18px;
+	border: 1px solid transparent;
+	height: 25px;
+	width: 25px;
+	cursor:pointer;
+}
+
+#enterBtn {
+	background-color: #52b700;
+	color:#DFF1D0;
+	padding:6px;
+	min-width:80px;
+}
+
+#enterBtn:hover {
+	color:#fff;
+	background-color: #71C42E;
+}
+
+#navbar {
+	/*margin-bottom:45px;*/
+	padding:10px;
+	margin-top:15px;
+	background-color:#52b700;
+}
+
+#greeting {
+	width:65%;
+	margin: 0 auto;
+	padding-bottom:20px;
+}
+
+.right {
+	float:right;
+}
+
+.searchBox{
+    color: #3f3f3f;
+    border: none;   
+    border-bottom: 1px solid #ddd;
+    box-shadow: none;
+    font-size: 12px;
+    height: 20px;
+    padding: 6px 25px 6px 6px;
+}
+
+.row {
+	margin: 0 auto;
+	width:80%
+}
+
+.row2 {
+	margin: 0 auto;
+	width:90%
+}
+
+.sections {
+	margin: 0 auto;
+	width:85%;
+	padding-left:20px;
+	/*display:block;*/
+}
+
+.inputBox {
+    color: #3f3f3f;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    font-size: 12px;
+    height: 20px;
+    padding: 5px 6px; 4px 5px;
+    margin-right:15px;
+}
+
+.sectionBox {
+	color:#665;
+	margin:0 25px 35px 0;
+	border-radius: 5px;
+	width:26%;
+	display:inline-block;
+	position:relative;
+	box-shadow:0 5px 10px 0 rgba(0,0,0,.19);
+}
+
+.sectionContent {
+	padding:10px 20px 10px 35px;
+	margin:0;
+}
+
+.classBox {
+	color:#665;
+	display:inline-block;
+	margin:0 0 35px 155px;
+	position:relative;
+	width:calc(75% / 3);
+	border-radius: 5px;
+	padding:15px 20px 10px 20px;
+	box-shadow:0 5px 10px 0 rgba(0,0,0,.19);
+	background-color: white;	
+}
+
+.registerBox {
+	color:#665;
+	display:inline-block;
+	margin-top:80px;
+	margin-bottom:35px;
+	position:relative;
+	width:44.359%;
+	border-radius: 5px;
+	padding:20px 20px 30px 20px;
+	box-shadow:0 5px 10px 0 rgba(0,0,0,.19);	
+}
+
+.tag {
+	color:#fff;
+	font-weight:bold;
+	padding:5px 8px;
+	margin-left:-20px;
+	text-align:right;
+	text-decoration:none;
+	width:30px;
+	border-radius: 0 19px 19px 0;
+	display: block;
+	float:left;
+}
+
+.sectionhead {
+	color:#fff;
+	font-weight:bold;	
+	text-align:center;
+	display: block;
+	font-size:20px;
+}
+
+a.classlink {
+	font-size:24px;
+	font-weight:bold;
+	display:block;
+	margin-bottom:12px;
+	padding-left:55px;
+	text-decoration:none;
+}
+
+a.navlink {
+	margin:5px;
+	padding-left:20px;
+	color:#DFF1D0;
+	text-decoration:none;
+	font-size:20px;
+	font-weight:bold;
+}
+
+a.navlink:hover {
+	color:#fff;
+}
+
+a.subjectlink {
+	float:right;
+}
+
+a.subjectlink:visited {
+	color:blue;
+}
+
+a.register {
+	text-decoration:none;
+	text-align:center;
+	border-radius: 15px;
+	width:100%;
+	display:block;
+	padding: 5px 0px 5px 0px;
+	margin-top:8px;
+}
+
+a.subjectitem {
+	text-decoration: none;
+	color:#665;
+}
+
+a.subjectitem:hover {
+	text-decoration: underline;
+}
+
+li.subjectitem, span.subjectitem {
+	padding-top:5px;
+	font-size:14px;
+}
+
+span.subjectitem {
+	display:block;
+}
+
+div.subjectlist {
+	border-top: 1px solid #e1e1e5;
+	padding-top: 5px;
+	margin:0;
+}
+
+span.register {
+	margin-bottom:25px;
+	text-align:center;
+	display:block;
+	padding-top:15px;
+}
+
+span.instructions {
+	font-family:  proxima-nova, sans-serif, Calibri, arial, helvetica;
+}
+
+footer {
+	color:#fff;
+	background-color:#000;
+	padding-top:24px;
+	padding-bottom:24px;
+	height:20px;
+	text-align:center;
+	width:100%;
+	bottom:0;
+	clear: both;
+}
+
+span.footnote {	
+	color:green;
+}
