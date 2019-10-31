@@ -1,3 +1,36 @@
+.barred {
+	text-decoration: overline;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+td, th {
+  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+
+	background-color: #ff006c;
+	color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(even) {
+	background-color: #10a0b6;
+	color: white;
+}
+
 body {
 	font-family: Calibri, arial, helvetica, sans-serif;
 	background-color:white;
@@ -45,9 +78,10 @@ h2::after {
 #main {
 	padding-bottom:20px;
  	line-height: 1.4;
- 	min-height:80px;
 	background-size: cover;
 	padding-top: 45px;
+	padding-left: 100px;
+	padding-right: 100px;
 }
 
 #search {
@@ -148,9 +182,9 @@ h2::after {
 .classBox {
 	color:#665;
 	display:inline-block;
-	margin:0 0 35px 155px;
+	margin:0 0 35px 130px;
 	position:relative;
-	width:calc(75% / 3);
+	width:calc(80% / 3);
 	border-radius: 5px;
 	padding:15px 20px 10px 20px;
 	box-shadow:0 5px 10px 0 rgba(0,0,0,.19);

@@ -12,7 +12,7 @@
 		<header>
 			<div id="search"><span><input placeholder="Search topics" class="searchBox"><button id="searchBtn" type="submit"></button></span></div>
 			<span class="right"><form action="#"><input placeholder="username" class="inputBox"><input placeholder="password" class="inputBox"><button id="enterBtn">Enter</button></form></span>
-		</header><div id="navbar"><a href="register.html" class="navlink">Register</a></div>
+		</header><div id="navbar"><a href="#" class="navlink">Register</a></div>
 		<div id="container">
 			<div id="main">
 				<div class="row">
@@ -27,7 +27,9 @@
 			<footer><span class="footnote">No one who is willing will be left behind</span></footer>
 		</div>
 		<script> 
-			document.getElementById("main").style.backgroundImage = 'url("resources/how-to-overclock-pc-cpu-hero1534383854365.jpg")';
+			let main = document.getElementById("main");
+			main.style.backgroundImage = 'url("resources/how-to-overclock-pc-cpu-hero1534383854365.jpg")';
+			main.style.minHeight = '480px';
 		</script>
 	</body>
 </html>

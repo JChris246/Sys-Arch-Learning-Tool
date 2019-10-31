@@ -1,0 +1,25 @@
+#left {
+	color:#665;
+	display:inline-block;
+	margin:0 20px 20px 40px;
+	position:relative;
+	width:calc(85% / 2);
+	padding:15px 20px 10px 15px;
+}
+
+#right {
+	color:#665;
+	display:inline-block;
+	margin:0 20px 20px 20px;
+	position:relative;
+	width:calc(85% / 2);
+	padding:15px 20px 10px 0px;
+	float: right;
+}
+
+p {
+	background-color: white;
+	box-shadow:0 5px 10px 0 rgba(0,0,0,.19);
+	padding: 10px;
+	border-radius: 20px;
+}
