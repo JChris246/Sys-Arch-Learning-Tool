@@ -8,7 +8,7 @@
 }
 
 #right {
-	color:#665;
+	color:#4f4f4f;
 	display:inline-block;
 	margin:0 20px 20px 20px;
 	position:relative;
@@ -17,7 +17,26 @@
 	float: right;
 }
 
-p {
+span.header {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 15px;
+	margin: -25px -20px 0px -20px;
+	display: block;
+}
+
+div.center {
+	color:#665;
+	margin:50px auto;
+	width: 65%;
+	border-radius: 10px;
+	padding:20px 20px 10px 20px;
+	box-shadow:0 5px 10px 0 rgba(0,0,0,.19);
+	background-color: white;
+}
+
+p.block {
 	background-color: white;
 	box-shadow:0 5px 10px 0 rgba(0,0,0,.19);
 	padding: 10px;

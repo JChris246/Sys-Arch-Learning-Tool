@@ -1,13 +1,14 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
 		<title>System Arch Learning Tool | Boolean Laws</title>
 		<meta charset="utf-8">
-		<meta name="description" content="System Arch Learning official website - home">
+		<meta name="description" content="System Arch Learning official website - Boolean Laws">
 		<meta name="viewpoint" content="width=device-width, initial-scale=1"> 
 		<link rel="stylesheet" href="../css/colors.css">
 		<link rel="stylesheet" href="../css/main%20style.css">
 		<link rel="stylesheet" href="../css/panels.css">
+		<link rel="stylesheet" href="../css/buttons.css">
 	</head>
 	<body>
 		<div id="container">
@@ -17,9 +18,9 @@
 			<div id="main">
 				<h1 class="blue">Boolean Laws</h1>
 				<div id="left">
-					<p>Boolean laws are a set of rules/laws that were standardised to help reduce the number of logic gates needed to perform a particular logic operation. These rules called theorems, are known commonly as the <b>Laws of Boolean Algebra</b>.</p>
-					<p>The variables used in Boolean Algebra are bistable ie only 2 possible combinations: 0 or 1. However a boolean expression can have an infinite number of variables all labelled individually to represent inputs to the expression, For example, variables A, B, C etc, can give us a logical expression of A + B = C, but each variable can <b>ONLY</b> be a 0 or a 1.</p>
-					<p>The individual laws of Boolean, rules and theorems for Boolean Algebra are given in the table to the right</p>
+					<p class="block">Boolean laws are a set of rules/laws that were standardised to help reduce the number of logic gates needed to perform a particular logic operation. These rules called theorems, are known commonly as the <b>Laws of Boolean Algebra</b>.</p>
+					<p class="block">The variables used in Boolean Algebra are bistable ie only 2 possible combinations: 0 or 1. However a boolean expression can have an infinite number of variables all labelled individually to represent inputs to the expression, For example, variables A, B, C etc, can give us a logical expression of A + B = C, but each variable can <b>ONLY</b> be a 0 or a 1.</p>
+					<p class="block">The individual laws of Boolean, rules and theorems for Boolean Algebra are given in the table to the right</p>
 				</div>
 				<div id="right">
 					<table>
@@ -151,7 +152,7 @@
 		<script> 
 			let main = document.getElementById("main");
 			main.style.backgroundImage = "url('https://www.investopedia.com/thmb/tYahC_el76R8oETvnxgfH9uVdZo=/1000x750/smart/filters:no_upscale()/Free-boolean-algebra-hasse-diagram-a30ae4a9499547d186f0343e31eda288.png')";
-			main.style.minHeight = '920px';
+			main.style.minHeight = screen.availHeight+'px';
 		</script>
 	</body>
 </html>

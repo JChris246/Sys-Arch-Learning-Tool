@@ -1,0 +1,30 @@
+#searchBtn {
+	background: transparent url("../resources/search.svg") 50% 50% no-repeat;    
+    background-size: 18px 18px;
+	border: 1px solid transparent;
+	height: 25px;
+	width: 25px;
+	cursor:pointer;
+}
+
+#enterBtn {
+	background-color: #52b700;
+	color:#DFF1D0;
+	padding:6px;
+	min-width:80px;
+}
+
+#enterBtn:hover {
+	color:#fff;
+	background-color: #71C42E;
+}
+
+button.submit {
+	border: none;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+}
