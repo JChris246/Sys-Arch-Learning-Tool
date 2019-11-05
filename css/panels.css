@@ -9,7 +9,6 @@
 
 #right {
 	color:#4f4f4f;
-	display:inline-block;
 	margin:0 20px 20px 20px;
 	position:relative;
 	width:calc(85% / 2);
@@ -41,4 +40,9 @@ p.block {
 	box-shadow:0 5px 10px 0 rgba(0,0,0,.19);
 	padding: 10px;
 	border-radius: 20px;
+}
+
+div.result {
+	margin-top: 20px;
+	padding: 5px;
 }
