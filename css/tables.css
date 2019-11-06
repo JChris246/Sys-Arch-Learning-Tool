@@ -1,0 +1,77 @@
+table.striped {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+td.striped, th.striped {
+  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  padding: 8px;
+}
+
+table.compare {
+    margin: 0 auto;
+}
+
+table.compare {
+    width: 45%;
+    color:#665;
+    box-shadow:0 10px 15px 0 rgba(0,0,0,.19);
+}
+
+table.gateTable {
+    width: 45%;
+    display: inline-table;
+    margin-right:40px;
+}
+
+td.blank {
+    background-color: white;
+}
+
+tr.striped:nth-child(odd), tr.compare:nth-child(odd) {
+    background-color: #f5f5ec;
+}
+
+tr.striped:nth-child(even), tr.compare:nth-child(even) {
+    background-color: #10a0b6;
+    color: white;
+}
+
+td.compare, th.compare {
+    text-align: center;
+    padding: 12px;
+}
+
+th.striped, th.compare {
+	background-color: #ff006c;
+	color: white;
+	text-align: center;
+}
+
+.center_text {
+    text-align: center;
+}
+
+table.steps {
+	border-collapse: collapse;
+	border-spacing: 0;
+	color: #212121;
+	width:100%;
+}
+
+td.steps {
+	border-top: 1px solid #ddd;
+	padding: 15px;
+    vertical-align: top;
+    text-align: left;
+}
+
+td.top { /*dint wan use th*/
+	padding: 15px;
+    vertical-align: top;
+    text-align: left;
+}

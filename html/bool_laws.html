@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="../css/main%20style.css">
 		<link rel="stylesheet" href="../css/panels.css">
 		<link rel="stylesheet" href="../css/buttons.css">
+		<link rel="stylesheet" href="../css/tables.css">
 	</head>
 	<body>
 		<div id="container">
@@ -21,87 +22,85 @@
 					<p class="block">The individual laws of Boolean, rules and theorems for Boolean Algebra are given in the table to the right</p>
 				</div>
 				<div id="right">
-					<table>
-						<tr>
-							<th>Law</th>
-							<th>Example</th>
+					<table class="striped">
+						<tr class="striped">
+							<th class="striped">Law</th>
+							<th class="striped">Example</th>
 						</tr>
 					
-						<tr>
-							<td>Commutative Law</td>
-							<td>
+						<tr class="striped">
+							<td class="striped center_text">Commutative Law</td>
+							<td class="striped">
 								(a) A + B = B + A
 								<br/>
-								(b) A B = B A
+								(b) A * B = B * A
 							</td>
 						 </tr>
 						 
-						<tr>
-							<td>Associate Law </td>
-							<td>
+						<tr class="striped">
+							<td class="striped center_text">Associative Law </td>
+							<td class="striped">
 								(a) (A + B) + C = A + (B + C)
 								<br/>
-								(b) (A B) C = A (B C)
+								(b) (A * B) C = A (B * C)
 							</td>
 						</tr>
 					
-						<tr>
-							<td>Distributive Law </td>
-							<td>
+						<tr class="striped">
+							<td class="striped center_text">Distributive Law </td>
+							<td class="striped">
 								(a) A (B + C) = A B + A C
 								<br/>
 								(b) A + (B C) = (A + B) (A + C)
 							</td>
 						</tr>
 					
-						<tr>
-							<td>Identity Law </td>
-							<td>
+						<tr class="striped">
+							<td class="striped center_text">Idempotent</td>
+							<td class="striped">
 								(a) A + A = A
 									<br/>
-								(b) A A = A
+								(b) A * A = A
 							</td>
 						</tr>
+
+						<tr class="striped">
+								<td class="striped center_text">Double Negation Law</td>
+								<td class="striped">
+									(a) ~(~A) = A
+								</td>
+							</tr>
 					
-						<tr>
-							<td>Redundance Law</td>
-							<td>
-								(a) A + A B = A
+						<tr class="striped">
+							<td class="striped center_text">Redundance Law</td>
+							<td class="striped">
+								(a) A + A * B = A
 								<br/>
 								(b) A (A + B) = A
 							</td>
 						</tr>
 					
-						<tr>
-							<td>Laws of Complementarity </td>
-							<td>
-								(a) A + <span class="barred">A</span> = 1
-								<br/>
-								(b) A.<span class="barred">A</span> = 0
-							</td>
-						</tr>
-					
-						<tr>
-							<td>Operations with 0 </td>
-							<td>
-								(a) 0 + A = A
-								<br/>
-								(b) 0 A = 0
-							</td>
-						</tr>
-					
-						<tr>
-							<td>Operations with 1</td>
-							<td>
+						<tr class="striped">
+							<td class="striped center_text">Annulment / Domination Law</td>
+							<td class="striped">
 								(a) 1 + A = 1
 								<br/>
-								(b) 1 A = A
+								(b) 0 * A = 0
 							</td>
 						</tr>
 					
-						<tr>
-							<td>Simplification Theorems</td>
-							<td>
+						<tr class="striped">
+							<td class="striped center_text">Identity Laws</td>
+							<td class="striped">
+								(a) 1 * A = A
+								<br/>
+								(b) 0 + A = A
+							</td>
+						</tr>
+					
+						<tr class="striped">
+							<td class="striped center_text">Simplification Theorems</td>
+							<td class="striped">
 								(a) A + <span class="barred">A</span> B = A + B
 								<br/>
 								(b) A(<span class="barred">A</span> + B) = AB
@@ -112,19 +111,19 @@
 							</td>
 						</tr>
 					
-						<tr>
-							<td >Operators with Complement</td>
-							<td>
-								(a) <span class="barred">A</span>  + A= 1
+						<tr class="striped">
+							<td class="striped center_text">Complement Property</td>
+							<td class="striped">
+								(a) <span class="barred">A</span> + A = 1
 								<br/>
-								(b) <span class="barred">A</span> A = 0
+								(b) <span class="barred">A</span> * A = 0
 								<br/>
 							</td>
 						</tr>
 					
-						<tr>
-							<td>De Morgan's Theorem</td>
-							<td>
+						<tr class="striped">
+							<td class="striped center_text">De Morgan's Theorem</td>
+							<td class="striped">
 								(a) (<span class="barred">A+B</span>) =  <span class="barred">A</span><span class="barred">B</span>
 								<br/>
 								(b) (<span class="barred">AB</span>) = <span class="barred">A</span> + <span class="barred">B</span>
@@ -132,9 +131,9 @@
 							</td>
 						</tr>
 					
-						<tr>
-							<td>Order of Precedence</td>
-							<td>
+						<tr class="striped">
+							<td class="striped center_text">Order of Precedence</td>
+							<td class="striped">
 								AB = A.B
 								<br/>
 								A.B+C = (A.B) + C
@@ -149,7 +148,7 @@
 		</div>	
 		<script> 
 			let main = document.getElementById("main");
-			main.style.backgroundImage = "url('https://www.investopedia.com/thmb/tYahC_el76R8oETvnxgfH9uVdZo=/1000x750/smart/filters:no_upscale()/Free-boolean-algebra-hasse-diagram-a30ae4a9499547d186f0343e31eda288.png')";
+			main.style.backgroundImage = "url('../resources/Free-boolean-algebra-hasse-diagram-a30ae4a9499547d186f0343e31eda288.png')";
 			main.style.minHeight = '940px';
 		</script>
 	</body>

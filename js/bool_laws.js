@@ -49,11 +49,14 @@ function convert(raw) {
 
 function createTable(values) {
 	let table = document.createElement("table");
+	table.classList.add("compare");
 	for (i = 0; i < values.length; i++) {
 		let tempTR = document.createElement("tr");
+		tempTR.classList.add("compare");
 		for(j = 0; j < values[i].length; j++) {
 			let tempCol = document.createElement(i == 0 ? "th": "td");
 			tempCol.innerHTML = values[i][j];
+			tempCol.classList.add("compare");
 			tempTR.appendChild(tempCol);
 		}
 		table.appendChild(tempTR);

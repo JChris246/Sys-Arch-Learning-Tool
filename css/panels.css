@@ -16,6 +16,15 @@
 	float: right;
 }
 
+table.sidePanel {
+	margin: 0;
+	background-color: white;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+	padding-bottom:50px;
+}
+
 span.header {
 	color: white;
 	font-size: 20px;
@@ -43,7 +52,7 @@ div.center {
 	background-color: white;
 }
 
-p.block {
+.block {
 	background-color: white;
 	box-shadow:0 5px 10px 0 rgba(0,0,0,.19);
 	padding: 10px;
@@ -51,6 +60,6 @@ p.block {
 }
 
 div.result {
-	margin-top: 20px;
+	margin-top: 20px auto;
 	padding: 5px;
 }

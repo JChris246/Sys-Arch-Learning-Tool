@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>System Arch Learning Tool | Boolean Simplification Examples</title>
+		<meta charset="utf-8">
+		<meta name="description" content="System Arch Learning official website - Boolean Simplification Examples">
+		<meta name="viewpoint" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="../css/colors.css">
+		<link rel="stylesheet" href="../css/main%20style.css">
+        <link rel="stylesheet" href="../css/panels.css">
+        <link rel="stylesheet" href="../css/tables.css">
+	</head>
+	<body>
+        <div id="container">
+            </header><div id="navbar"><a href="../index.html" class="navlink">Home</a></div>
+			<div id="main">
+                <h1 class="blue">Boolean Algebra</h1>
+                <div class="center">
+                    <h2 class="green">Example 1</h2>
+                        <table class="steps">
+                            <td class="top">(p + q) * (p + r)</td><tdclass="top"></td></tr>
+                            <td class="steps">p + (q * r)</td><td class="steps">Distributive Law</td></tr>
+                        </table>
+                </div>
+                <div class="center">
+                        <h2 class="green">Example 2</h2>
+                        <table class="steps">
+                                <td class="top">p + ~(p * q)</td><tdclass="top"></td></tr>
+                                <td class="steps">p + (~p + ~q)</td><td class="steps">Demorgan's law</td></tr>
+                                <td class="steps">(p + ~p) + ~q</td><td class="steps">Associative law</td></tr>
+                                <td class="steps">1 + ~q</td><td class="steps">Complement property</td></tr>
+                                <td class="steps">1</td><td class="steps">Domination law</td></tr>
+                            </table>
+                    </div>
+                    <div class="center">
+                            <h2 class="green">Example 3</h2>
+                            <table class="steps">
+                                <td class="top">~(A * B) * (~A + B) * (~B + B)</td><tdclass="top"></td></tr>
+                                <td class="steps">~(A * B) * (~A + B) * 1</td><td class="steps">Complement law</td></tr>
+                                <td class="steps">~(A * B) * (~A + B)</td><td class="steps">Identity law</td></tr>
+                                <td class="steps">(~A + ~B) * (~A + B)</td><td class="steps">DeMorgan's law</td></tr>
+                                <td class="steps">~A + ~B * B</td><td class="steps">Distributive law</td></tr>
+                                <td class="steps">~A + 0</td><td class="steps">Complement law</td></tr>
+                                <td class="steps">~A</td><td class="steps">Identity law</td></tr>
+                            </table>
+                        </div>
+            </div>	
+		    <script> 
+			    let main = document.getElementById("main");
+			    main.style.backgroundImage = "url('../resources/Free-boolean-algebra-hasse-diagram-a30ae4a9499547d186f0343e31eda288.png')";
+            </script>
+            <footer><span class="footnote">No one who is willing will be left behind</span></footer>
+        </div>	
+	</body>
+</html>
