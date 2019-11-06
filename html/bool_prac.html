@@ -13,14 +13,9 @@
 	</head>
 	<body>
 		<div id="container">
-			<div id="search"><span><input placeholder="Search topics" class="searchBox"><button id="searchBtn" type="submit"></button></span></div>
-			<span class="right"><form action="#"><input placeholder="username" class="inputBox"><input placeholder="password" class="inputBox"><button id="enterBtn">Enter</button></form></span>
 			</header><div id="navbar"><a href="../index.html" class="navlink">Home</a></div>
 			<div id="main">
 				<h1 class="blue">Boolean Laws</h1>
-				<div class="center">
-						<span class="header greenbg">Selection</span><p/>Choose the number of variables in the expressions (you can choose more than one option).</p><input type="checkbox" name="1var">Expressions with 1 variable</input><br/><input type="checkbox" name="2var">Expressions with 2 variables</input><br/><input type="checkbox" name="3var">Expressions with 3 variables</input><br/><input type="checkbox" name="4var">Expressions with 4 variables</input><p/><button class="submit greenbg" onclick="readParams()">Continue</button>
-				</div>
 			</div>
 			<footer><span class="footnote">No one who is willing will be left behind</span></footer>
 		</div>	
@@ -28,6 +23,8 @@
 			let main = document.getElementById("main");
 			main.style.backgroundImage = "url('../resources/Free-boolean-algebra-hasse-diagram-a30ae4a9499547d186f0343e31eda288.png')";
 			main.style.minHeight = screen.availHeight+'px';
+			init();
+			createQuestion();
 		</script>
 	</body>
 </html>

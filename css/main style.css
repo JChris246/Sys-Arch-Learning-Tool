@@ -3,6 +3,7 @@ table {
   border-collapse: collapse;
   border-radius: 10px;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 td, th {
@@ -13,7 +14,6 @@ td, th {
 }
 
 th {
-
 	background-color: #ff006c;
 	color: white;
 }
@@ -76,8 +76,8 @@ h2::after {
  	line-height: 1.4;
 	background-size: cover;
 	padding-top: 45px;
-	padding-left: 100px;
-	padding-right: 100px;
+	padding-left: 80px;
+	padding-right: 80px;
 }
 
 #search {
@@ -86,9 +86,7 @@ h2::after {
 }
 
 #navbar {
-	/*margin-bottom:45px;*/
 	padding:10px;
-	margin-top:15px;
 	background-color:#52b700;
 }
 
@@ -113,8 +111,8 @@ h2::after {
 }
 
 .row {
-	margin: 0 auto;
-	width:80%
+	margin: 180px auto;
+	width: 88%
 }
 
 .row2 {
@@ -135,7 +133,7 @@ h2::after {
     box-shadow: none;
     font-size: 12px;
     height: 20px;
-    padding: 5px 6px; 4px 5px;
+    padding: 5px 6px 4px 5px;
     margin-right:15px;
 }
 
@@ -157,9 +155,9 @@ h2::after {
 .classBox {
 	color:#665;
 	display:inline-block;
-	margin:0 0 35px 130px;
+	margin:0 0 35px 25px;
 	position:relative;
-	width:calc(80% / 3);
+	width:calc(75% / 3);
 	border-radius: 5px;
 	padding:15px 20px 10px 20px;
 	box-shadow:0 5px 10px 0 rgba(0,0,0,.19);
@@ -217,7 +215,7 @@ a.navlink {
 	padding-left:20px;
 	color:#DFF1D0;
 	text-decoration:none;
-	font-size:20px;
+	font-size:28px;
 	font-weight:bold;
 }
 

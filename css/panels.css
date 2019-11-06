@@ -9,7 +9,7 @@
 
 #right {
 	color:#4f4f4f;
-	margin:0 20px 20px 20px;
+	margin: -80px 20px 20px 20px;
 	position:relative;
 	width:calc(85% / 2);
 	padding:15px 20px 10px 0px;
@@ -23,6 +23,14 @@ span.header {
 	padding: 15px;
 	margin: -25px -20px 0px -20px;
 	display: block;
+}
+
+span.correction {
+	padding: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 15px;
 }
 
 div.center {
