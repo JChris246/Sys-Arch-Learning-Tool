@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<div id="container">
-			</header><div id="navbar"><a href="../index.html" class="navlink">Home</a></div>
+			<div id="navbar"><a href="../index.html" class="navlink">Home</a></div>
 			<div id="kmain">
 				<h1 class="blue">Karnaugh Maps</h1>
 				<div id="left">
@@ -25,24 +25,26 @@
 					
 					<div class="block">
 						<h2 class="red">Steps to Construct a Karnaugh Map from an Expression</h2><br/>
-						1. Create a grid consisting of 2<sup>n</sup> squares, where n = number of unique input variables and label the variables used .
-						<i>(This varies depending on the number of variables used)</i> <br/><br/>
+						<ol class="steps">
+						<li>Create a grid consisting of 2<sup>n</sup> squares, where n = number of unique input variables and label the variables used .
+						<i>(This varies depending on the number of variables used)</i> <br/><br/></li>
 						
 						
-						2. The required inputs of the expression are transferred <b>from</b> a truth table onto the grid in the Karnaugh map.
+						<li>The required inputs of the expression are transferred <b>from</b> a truth table onto the grid in the Karnaugh map.
 						The cells are ordered in Gray code, and each cell position represents one combination of input conditions,
 						while each cell value represents the corresponding output value. 
 						The Karnaugh Map is populated by placing a <b>1</b> in all the cells for which the <b>output is 1</b>, and placing a <b>0</b> in all the cells for which 
 						the <b>output is 0</b>. <br />
 						An <b>X</b> is placed in squares corresponding to <b>don't-care conditions</b>.<br />
-					    <i>(In digital logic, a don't-care term for a function is an input-sequence for which the function output does not matter.)</i> <br /><br />
+					    <i>(In digital logic, a don't-care term for a function is an input-sequence for which the function output does not matter.)</i> <br /><br /></li>
 						
-						3. Group adjacent 1’s in the largest possible groups of 2<sup>n</sup> (i.e. groups of 2, 4, 8 etc.)
+						<li>Group adjacent 1’s in the largest possible groups of 2<sup>n</sup> (i.e. groups of 2, 4, 8 etc.)
 							Aim to <b> minimize the number of <u>groups</u> selected</b>, while <b>maximizing <u>the number of elements within each group</u></b>.
 							After grouping, note the input combination of each group,
 							opposite inputs will cancel. Variables within the same group are AND’d,
 							however, when more than one group exists, the individual expressions from each respective group, are OR’d.
-							This leaves you with the simplified expression of the original input.
+							This leaves you with the simplified expression of the original input.</li>
+						</ol>
 					</div>
 				</div>
 				<div id="right">
@@ -104,13 +106,13 @@
 					Step 3<br>
 					After grouping the kmap now looks like
 					<img src ="../resources/2varD.png">
-					The input combinations of each group is: <br>
-					Group 1 (Blue): <span class="barred">B</span>BA <br>
-					Group 2 (Red): <span class="barred">A</span>AB <br>
-					When simplified, the input combination of each group is:<br>
+					The input combinations of each group is: <br/>
+					Group 1 (Blue): <span class="barred">B</span>BA <br/>
+					Group 2 (Red): <span class="barred">A</span>AB <br class="space"/>
+					When simplified, the input combination of each group is:<br/>
 					Group 1 (Blue): A <br>
 					Group 2 (Red): B <br>
-					<i>(Since opposite inputs will cancel)</i> <br>
+					<i>(Since opposite inputs will cancel - Complement property)</i> <br class="space"/>
 					Since there are 2 separate groups, these must be OR'd to create the final simplified expression.
 					Thus, the final simplified expression is: <b> A + B</b>
 					

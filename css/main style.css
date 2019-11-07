@@ -214,6 +214,11 @@ a.subjectitem:hover {
 	text-decoration: underline;
 }
 
+ol.steps {
+	margin-left: 18px;
+	padding-left: 2px;
+}
+
 li.subjectitem, span.subjectitem {
 	padding-top:5px;
 	font-size:14px;
