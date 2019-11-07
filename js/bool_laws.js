@@ -131,6 +131,7 @@ function getRandomIndex() {
 		j = Math.floor(Math.random() * database.length); // 0 - database length
 		valid = !complete[j]; //avoid using a previously question
 	}
+	complete[j] = true;
 	return j;
 }
 
