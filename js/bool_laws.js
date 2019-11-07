@@ -20,7 +20,7 @@ function init() {
 
 function createPad() {
 	//if previous pad existed, remove it
-	let temp = document.querySelector("div.center");
+	let temp = document.querySelector("div.push_center");
 	if (temp)
 		temp.remove();
 
@@ -30,10 +30,10 @@ function createPad() {
 	header.innerHTML = "Simplify the following boolean expression";
 
 	let div = document.createElement("div");
-	div.classList.add("center");
+	div.classList.add("push_center");
 	div.appendChild(header);
 
-	document.getElementById("main").appendChild(div);
+	document.getElementById("law_main").appendChild(div);
 	return div;
 }
 
@@ -115,8 +115,8 @@ function createEnterBtn(attempt, ans, table) {
 			container.appendChild(next);
 
 			//add header (correct or incorrect) and container with next to main container
-			document.querySelectorAll("div.center")[0].appendChild(header);
-			document.querySelectorAll("div.center")[0].appendChild(container);
+			document.querySelectorAll("div.push_center")[0].appendChild(header);
+			document.querySelectorAll("div.push_center")[0].appendChild(container);
 		}
 	};
 

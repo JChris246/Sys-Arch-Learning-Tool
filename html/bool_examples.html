@@ -13,42 +13,50 @@
 	<body>
         <div id="container">
             </header><div id="navbar"><a href="../index.html" class="navlink">Home</a></div>
-			<div id="main">
-                <h1 class="blue">Boolean Algebra</h1>
+			<div id="law_main">
+                <h1 class="blue after">Boolean Algebra</h1>
                 <div class="center">
                     <h2 class="green">Example 1</h2>
-                        <table class="steps">
-                            <td class="top">(p + q) * (p + r)</td><tdclass="top"></td></tr>
-                            <td class="steps">p + (q * r)</td><td class="steps">Distributive Law</td></tr>
-                        </table>
+                    <table class="steps">
+                        <td class="top">(p + q) * (p + r)</td><tdclass="top"></td></tr>
+                        <td class="steps">p + (q * r)</td><td class="steps">Distributive Law</td></tr>
+                    </table>
                 </div>
                 <div class="center">
-                        <h2 class="green">Example 2</h2>
-                        <table class="steps">
-                                <td class="top">p + ~(p * q)</td><tdclass="top"></td></tr>
-                                <td class="steps">p + (~p + ~q)</td><td class="steps">Demorgan's law</td></tr>
-                                <td class="steps">(p + ~p) + ~q</td><td class="steps">Associative law</td></tr>
-                                <td class="steps">1 + ~q</td><td class="steps">Complement property</td></tr>
-                                <td class="steps">1</td><td class="steps">Domination law</td></tr>
-                            </table>
-                    </div>
-                    <div class="center">
-                            <h2 class="green">Example 3</h2>
-                            <table class="steps">
-                                <td class="top">~(A * B) * (~A + B) * (~B + B)</td><tdclass="top"></td></tr>
-                                <td class="steps">~(A * B) * (~A + B) * 1</td><td class="steps">Complement law</td></tr>
-                                <td class="steps">~(A * B) * (~A + B)</td><td class="steps">Identity law</td></tr>
-                                <td class="steps">(~A + ~B) * (~A + B)</td><td class="steps">DeMorgan's law</td></tr>
-                                <td class="steps">~A + ~B * B</td><td class="steps">Distributive law</td></tr>
-                                <td class="steps">~A + 0</td><td class="steps">Complement law</td></tr>
-                                <td class="steps">~A</td><td class="steps">Identity law</td></tr>
-                            </table>
-                        </div>
-            </div>	
-		    <script> 
-			    let main = document.getElementById("main");
-			    main.style.backgroundImage = "url('../resources/Free-boolean-algebra-hasse-diagram-a30ae4a9499547d186f0343e31eda288.png')";
-            </script>
+                    <h2 class="green">Example 2</h2>
+                    <table class="steps">
+                        <td class="top">p + ~(p * q)</td><tdclass="top"></td></tr>
+                        <td class="steps">p + (~p + ~q)</td><td class="steps">Demorgan's law</td></tr>
+                        <td class="steps">(p + ~p) + ~q</td><td class="steps">Associative law</td></tr>
+                        <td class="steps">1 + ~q</td><td class="steps">Complement property</td></tr>
+                        <td class="steps">1</td><td class="steps">Domination law</td></tr>
+                    </table>
+                </div>
+                <div class="center">
+                    <h2 class="green">Example 3</h2>
+                    <table class="steps">
+                        <td class="top">A * B + ~B * A + ~A * B</td><tdclass="top"></td></tr>
+                        <td class="steps">A * (B + ~B) + ~A * B</td><td class="steps"> Distributive law</td></tr>
+                        <td class="steps">A * (1) + ~A * B</td><td class="steps">Complement property</td></tr>
+                        <td class="steps">A + ~A * B</td><td class="steps">Identity law</td></tr>
+                        <td class="steps">~(A + ~A) * (A + B)</td><td class="steps">Distributive law</td></tr>
+                        <td class="steps">1 * (A + B)</td><td class="steps">Complement law</td></tr>
+                        <td class="steps">~A + B</td><td class="steps">Identity law</td></tr>
+                    </table>
+                </div>
+                <div class="center">
+                    <h2 class="green">Example 4</h2>
+                    <table class="steps">
+                        <td class="top">~(A * B) * (~A + B) * (~B + B)</td><tdclass="top"></td></tr>
+                        <td class="steps">~(A * B) * (~A + B) * 1</td><td class="steps">Complement law</td></tr>
+                        <td class="steps">~(A * B) * (~A + B)</td><td class="steps">Identity law</td></tr>
+                        <td class="steps">(~A + ~B) * (~A + B)</td><td class="steps">DeMorgan's law</td></tr>
+                        <td class="steps">~A + ~B * B</td><td class="steps">Distributive law</td></tr>
+                        <td class="steps">~A + 0</td><td class="steps">Complement law</td></tr>
+                        <td class="steps">~A</td><td class="steps">Identity law</td></tr>
+                    </table>
+                </div>
+            </div>
             <footer><span class="footnote">No one who is willing will be left behind</span></footer>
         </div>	
 	</body>

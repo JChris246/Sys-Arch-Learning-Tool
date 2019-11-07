@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>System Arch Learning Tool | Boolean Laws</title>
+		<meta charset="utf-8">
+		<meta name="description" content="System Arch Learning official website - Boolean Laws">
+		<meta name="viewpoint" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="../css/colors.css">
+		<link rel="stylesheet" href="../css/main%20style.css">
+		<link rel="stylesheet" href="../css/panels.css">
+		<link rel="stylesheet" href="../css/buttons.css">
+	</head>
+	<body>
+		<div id="container">
+			</header><div id="navbar"><a href="../index.html" class="navlink">Home</a></div>
+			<div id="kmain">
+				<h1 class="blue">Karnaugh Maps</h1>
+				<div id="left">
+					<p class="block">
+						<b>What are Karnaugh Maps</b><br class="space"/>
+						A Karnaugh Map is a graphical method of simplifying Boolean Algebra expressions. While Karnaugh Maps will produce the same 
+						simplified expression as using the Laws of Boolean Algebra, Karnaugh maps are more efficient as they reduce the need for extensive 
+						calculations by taking advantage of humans' pattern-recognition capability.
+					</p>
+					
+					<div class="block">
+						<h2 class="red">Steps to Construct a Karnaugh Map from an Expression</h2><br/>
+						1. Create a grid consisting of 2<sup>n</sup> squares, where n = number of unique input variables and label the variables used .
+						<i>(This varies depending on the number of variables used)</i> <br/><br/>
+						
+						
+						2. The required inputs of the expression are transferred <b>from</b> a truth table onto the grid in the Karnaugh map.
+						The cells are ordered in Gray code, and each cell position represents one combination of input conditions,
+						while each cell value represents the corresponding output value. 
+						The Karnaugh Map is populated by placing a <b>1</b> in all the cells for which the <b>output is 1</b>, and placing a <b>0</b> in all the cells for which 
+						the <b>output is 0</b>. <br />
+						An <b>X</b> is placed in squares corresponding to <b>don't-care conditions</b>.<br />
+					    <i>(In digital logic, a don't-care term for a function is an input-sequence for which the function output does not matter.)</i> <br /><br />
+						
+						3. Group adjacent 1’s in the largest possible groups of 2<sup>n</sup> (i.e. groups of 2, 4, 8 etc.)
+							Aim to <b> minimize the number of <u>groups</u> selected</b>, while <b>maximizing <u>the number of elements within each group</u></b>.
+							After grouping, note the input combination of each group,
+							opposite inputs will cancel. Variables within the same group are AND’d,
+							however, when more than one group exists, the individual expressions from each respective group, are OR’d.
+							This leaves you with the simplified expression of the original input.
+					</div>
+				</div>
+				<div id="right">
+					<div class="block">
+					<h2 class="green">Examples</h2>
+					<b> 2 Variable Karnaugh Maps</b><br/>
+					Based on the steps on the left, we will explain the creation of 2 variable Karnaugh Maps using the expression: <b>AB + <span class="barred">B</span>A + <span class="barred">A</span>B</b>
+					<br/><br/>Step 1<br><br>
+					The Expression "<b>AB + <span class="barred">B</span>A + <span class="barred">A</span>B</b>" contains <b> 2</b> unique variables.
+					Thus, a grid must be made which contains 2<sup>2</sup> (4) cells. When labelling 2 variable k-maps the values on the left correspond to the possible states of the most significant bit (in this case <b>A</b>) while
+					the values on the top correspond to the possible states of the least significant bit (in this case <b>B</b>)
+					 <img src="../resources/2varA.png">
+					 <br><br>
+					 
+					Step 2<br>
+					This table corresponds to the expression: <b>AB + <span class="barred">B</span>A + <span class="barred">A</span>B</b>
+					<table>
+						<tr>
+							<th>A</th>
+							<th>B</th>
+							<th>Output</th>
+							
+						</tr>
+					
+						<tr>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						
+						<tr>
+							<td>0</td>
+							<td>1</td>
+							<td>1</td>
+						</tr>
+						
+						<tr>
+							<td>1</td>
+							<td>0</td>
+							<td>1</td>
+						</tr>
+						
+						<tr>
+							<td>1</td>
+							<td>1</td>
+							<td>1</td>
+						</tr>
+					</table>
+					Each cell position in the table must correspond to input values from the truth table of the expression.
+					Thus, the cells will be read as coordinates.
+					<img src ="../resources/2varB.png">
+					
+					Therefore the value of the cell must correspond to the output of the particular input coordinate in the table.
+					Thus the final representation of the kmap is
+					<img src ="../resources/2varC.png">
+					
+					<br><br>
+					 
+					Step 3<br>
+					After grouping the kmap now looks like
+					<img src ="../resources/2varD.png">
+					The input combinations of each group is: <br>
+					Group 1 (Blue): <span class="barred">B</span>BA <br>
+					Group 2 (Red): <span class="barred">A</span>AB <br>
+					When simplified, the input combination of each group is:<br>
+					Group 1 (Blue): A <br>
+					Group 2 (Red): B <br>
+					<i>(Since opposite inputs will cancel)</i> <br>
+					Since there are 2 separate groups, these must be OR'd to create the final simplified expression.
+					Thus, the final simplified expression is: <b> A + B</b>
+					
+				</div>
+				</div>
+			</div>
+			<footer><span class="footnote">No one who is willing will be left behind</span></footer>
+		</div>	
+		<!--<script> 
+			let main = document.getElementById("main");
+			main.style.backgroundImage = "url('https://www.investopedia.com/thmb/tYahC_el76R8oETvnxgfH9uVdZo=/1000x750/smart/filters:no_upscale()/Free-boolean-algebra-hasse-diagram-a30ae4a9499547d186f0343e31eda288.png')";
+			main.style.minHeight = '940px';
+		</script>-->
+	</body>
+</html>

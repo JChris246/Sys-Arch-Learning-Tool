@@ -52,6 +52,27 @@ div.center {
 	background-color: white;
 }
 
+div.push_center {
+	color:#665;
+	width: 65%;
+	border-radius: 10px;
+	padding:20px 20px 10px 20px;
+	box-shadow:0 5px 10px 0 rgba(0,0,0,.19);
+	background-color: white;
+}
+
+@media only screen and (max-height: 800px) {
+	div.push_center {
+		margin: 80px auto 280px;
+	}
+}
+
+@media only screen and (min-height: 800px) {
+	div.push_center {
+		margin: 100px auto 460px;
+	}
+}
+
 .block {
 	background-color: white;
 	box-shadow:0 5px 10px 0 rgba(0,0,0,.19);
