@@ -42,14 +42,21 @@ span.correction {
 	margin-bottom: 15px;
 }
 
-div.center {
+div.center, div.center2 {
 	color:#665;
 	margin:50px auto;
-	width: 65%;
 	border-radius: 10px;
 	padding:20px 20px 10px 20px;
 	box-shadow:0 5px 10px 0 rgba(0,0,0,.19);
 	background-color: white;
+}
+
+div.center {
+	width: 65%;
+}
+
+div.center2 {
+	width: 75%;
 }
 
 div.push_center {

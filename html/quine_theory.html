@@ -21,9 +21,9 @@
                     </div>
                     <div class="center">
                         <h2 class="green">Example</h2><br class="space"/>
-                        <b>F(W,X,Y,Z) = ∑m (2,6,8,9,10,11,14,15)</b><p></p>
+                        <b>F(W,X,Y,Z) = &#931;m (2,6,8,9,10,11,14,15)</b><p></p>
                         First of all, you set out the numbers in their binary format as well as the letter format where 0 represents a complemented term or ( ‘ ) above that letter and 1 would be an uncomplemented term.<br class="space"/>
-                        <table class="invisible"><tr><td>2</td><td>0010</td><td>W'X'YZ'</td></tr><tr><td>6</td><td>0110</td><td>W'XYZ'</td></tr><tr><td>8</td><td>1000</td><td>WX'Y'Z'</td></tr><tr><td>9</td><td>1001</td><td>WX'Y'Z</td></tr><tr><td>10</td><td>1010</td><td>WX'YZ'</td></tr><tr><td>11</td><td>1110</td><td>WXYZ'</td></tr><tr><td>15</td><td>1111</td><td>WXYZ</td></tr></table><p></p>
+                        <table class="invisible"><tr><td>2</td><td>0010</td><td>W'X'YZ'</td></tr><tr><td>6</td><td>0110</td><td>W'XYZ'</td></tr><tr><td>8</td><td>1000</td><td>WX'Y'Z'</td></tr><tr><td>9</td><td>1001</td><td>WX'Y'Z</td></tr><tr><td>10</td><td>1010</td><td>WX'YZ'</td></tr><tr><td>11</td><td>1110</td><td>WXYZ'</td></tr><tr><td>14</td><td>1110</td><td>WXYZ'</td></tr><tr><td>15</td><td>1111</td><td>WXYZ</td></tr></table><p></p>
 						Next you set out a table with 6 rows with the first column being the letter configurations, 2nd the index or the number represented by the letter configuration and the other 4 are the separate letters.<p></p>Also, you will group the numbers based on how many 1s are contained in it. For example, the <span class="red">red</span> group is the number with only 1 one, the <span class="yellow">yellow</span> represents numbers with 2 ones, <span class="blue">blue</span> represents numbers with 3 ones and <span class="green">green</span> represents numbers with 4 ones.<p></p>
 						<i>1<sup>st</sup> table</sup></i><table class="invisible white space">
 							<!--fairly lazy dont judge me--><style>td {padding: 6px;} </style>
@@ -37,7 +37,7 @@
 						For example, with W'X'YZ' (0010) in the <span class="red">Red</span> Group that would compare with W'XYZ'- 0110 in the <span class="yellow">2<sup>nd</sup></span> group and as they have only one bit different which is the X and X' that would be omitted, and it would leave W'YZ'.<p></p><br class="space"/>
 						<b>Matches for 1st table</b><br class="space"/><span class="red">Red</span> and <span class="yellow">Yellow</span> Groups - (2,6) W'YZ'; (2,10) X'YZ'; (8,9) WX'Y'; (8,10) WX'Z'<br/><span class="yellow">Yellow</span> and <span class="blue">Blue</span> Groups - (6,14) XYZ'; (9,11) WX'Z; (10,11) WX'Y; (10,14) WYZ'<br/><span class="blue">Blue</span> and <span class="green">Green</span> Groups - (11,15) WYZ; (14,15) WXY<br class="space"/><p></p>
 
-						<i>2<sup>nd</sup> table</sup></i><table class="invisible white"><tr class="purplebg"><td>Pairs</td><td colspan="2">Configuration</td></tr>
+						<i>2<sup>nd</sup> table</sup></i><table class="invisible white"><tr class="purplebg"><td>Pairs</td><td>Configuration</td><td></td></tr>
 							<tr class="redbg"><td>(2,6)</td><td>W'YZ'</td><td>&#10003;</td></tr><tr class="redbg"><td>(2,10)</td><td>X'YZ'</td><td>&#10003;</td></tr>
 							<tr class="redbg"><td>(8,9)</td><td>WX'Y'</td><td>&#10003;</td></tr><tr class="redbg"><td>(8,10)</td><td>WX'Z'</td><td>&#10003;</td></tr>
 							<tr class="yellowbg"><td>(6,14)</td><td>XYZ'</td><td>&#10003;</td></tr><tr class="yellowbg"><td>(9,11)</td><td>WX'Z</td><td>&#10003;</td></tr>
@@ -49,7 +49,7 @@
 						<b>Matches for 2nd Table</b><br class="space"/>
 						<span class="red">Red</span> and <span class="yellow">Yellow</span> Group - (2,6,10,14) YZ'; (2,10,6,14) YZ'; (8,9, 10, 11) WX'; (8,10, 9,11) WX'.<br><span class="yellow">Yellow</span> and <span class="blue">Blue</span> Group - (10,14, 11,15) WY; (10,11, 14,15) WY.<p></p>
 						<i>N.B if there are two of the same terms for matches in the 2nd group for example YZ' and YZ' you just use one thus only, YZ'.</i><p></p>
-						So, based on the matches for the 2nd table so far, we have <b>YZ'</b> + <b>WX'</b> + <b>WY</b><p></p>
+						So, based on the matches for the 2nd table so far, we have <b>YZ' + WX' + WY</b><p></p>
 
 						So, for the third table, where ever you see any of the elements in the first column in any of the letter configurations in the first row you would place an X.<p></p>For example, for YZ’ you can find that in WXYZ’, WX’YZ’, W’XYZ’ and W’X’YZ’.<p></p>An X - would represent the first found match.<p></p>A &#9633; – would represent if you find a match in a column which already has an X, you would use the &#9633; instead of putting another X in the column.<p></p>A &#9679; – would represent if there is no other matches found in the column but one, then put a &#9679;.<p></p>
 						<i>3<sup>rd</sup> table</sup></i><table class="invisible white">
@@ -57,7 +57,7 @@
 							<tr class="orangebg"><td>WX'</td><td></td><td></td><td>X</td><td>&#9633;</td><td>&#9679;</td><td>&#9679;</td><td></td><td></td></tr><tr class="orangebg"><td>WY</td><td>&#9679;</td><td>&#9633;</td><td>&#9633;</td><td>X</td><td></td><td></td><td></td><td></td></tr>
 						</table><p></p>
 
-						So, since there is a &#9633; in all of the rows of YZ’, WX’ and WY then the final function is: YZ’ + WX’ + WY.<p></p><i>N.B It may seem that the third table would be useless however in <a href="quine_examples.html" class="novisit">further examples</a>, you would see that the third table is used for further minimization of the Boolean Function.</i>
+						So, since there is a &#9633; in all of the rows of YZ’, WX’ and WY then the final function is: <b>YZ’ + WX’ + WY</b>.<p></p><i>N.B It may seem that the third table would be useless however in <a href="quine_examples.html" class="novisit">further examples</a>, you would see that the third table is used for further minimization of the Boolean Function.</i>
                     </div>
                 </div>
 			<footer><span class="footnote">No one who is willing will be left behind</span></footer>

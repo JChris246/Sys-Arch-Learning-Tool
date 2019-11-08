@@ -42,11 +42,11 @@ td.blank {
     background-color: white;
 }
 
-tr.striped:nth-child(odd), tr.compare:nth-child(odd) {
+tr.striped:nth-child(even), tr.compare:nth-child(odd) {
     background-color: #f5f5ec;
 }
 
-tr.striped:nth-child(even), tr.compare:nth-child(even) {
+tr.striped:nth-child(odd), tr.compare:nth-child(even) {
     background-color: #10a0b6;
     color: white;
 }

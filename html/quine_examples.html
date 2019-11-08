@@ -15,7 +15,71 @@
 			<div id="navbar"><a href="../index.html" class="navlink">Home</a></div>
 			<div id="qmain">
 				<h1 class="blue">The Quine-McCluskey Technique</h1>
+				<div class="center2">
+					<h2 class="green">Example 1</h2><b>F(A,B,C,D) = &#931;m (0,1,2,5,6,7,8,9,10,14)</b>
+					<table class="invisible">
+						<tr><td>0</td><td>0000</td><td>A'B'C'D'</td></tr>
+						<tr><td>1</td><td>0001</td><td>A'B'C'D</td></tr>
+						<tr><td>2</td><td>0010</td><td>A'B'CD'</td></tr>
+						<tr><td>5</td><td>0101</td><td>A'BC'D</td></tr>
+						<tr><td>6</td><td>0110</td><td>A'BCD'</td></tr>
+						<tr><td>7</td><td>0111</td><td>A'BCD</td></tr>
+						<tr><td>8</td><td>1000</td><td>AB'C'D'</td></tr>
+						<tr><td>9</td><td>1001</td><td>AB'C'D</td></tr>
+						<tr><td>10</td><td>1010</td><td>AB'CD'</td></tr>
+						<tr><td>14</td><td>1110</td><td>ABCD'</td></tr>
+					</table><p></p><br class="space"/>
 
+					<i>1<sup>st</sup> table</sup></i><table class="invisible white space">
+						<!--fairly lazy dont judge me--><style>td {padding: 6px;} </style>
+						<tr class="purplebg"><td></td><td class="bold">Index</td><td class="bold">A</td><td class="bold">C</td><td class="bold">B</td><td class="bold">D</td></tr>
+						<tr class="redbg"><td>A'B'C'D'</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+						<tr class="yellowbg"><td>A'B'C'D</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td></tr>
+						<tr class="yellowbg"><td>A'B'CD'</td><td>2</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+						<tr class="yellowbg"><td >AB'C'D'</td><td>8</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+						<tr class="bluebg"><td>A'BC'D</td><td>5</td><td>0</td><td>1</td><td>0</td><td>1</td></tr>
+						<tr class="bluebg"><td>A'BCD'</td><td>6</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+						<tr class="bluebg"><td>AB'C'D</td><td>9</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+						<tr class="bluebg"><td>AB'CD'</td><td>10</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+						<tr class="greenbg"><td >A'BCD</td><td>7</td><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+						<tr class="greenbg"><td>ABCD'</td><td>14</td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+					</table><p></p><br class="space"/>
+
+					<b>Matches for 1st Table</b><p></p><span class="red">Red</span> and <span class="yellow">Yellow</span> Groups - (0,1) A'B'C'; (0,2) A'B'D'; (0,8) B'C'D'<br/><span class="yellow">Yellow</span> and <span class="blue">Blue</span> Groups - (1,5) A'C'D; (1,9) B'C'D; (2,6) A'CD'; (2,10) B'CD'; (8,9) AB'C'; (8,10) AB'D'<br/><span class="blue">Blue</span> and <span class="green">Green</span> Groups - (6,14) BCD'; (5,7) A'BD; (10,14) ACD'<p></p>
+
+					<i>2<sup>nd</sup> table</sup></i><table class="invisible white"><tr class="purplebg"><td>Pairs</td><td>Configuration</td><td></td></tr>
+						<tr class="redbg"><td>(0,1)</td><td>A'B'C'</td><td>&#10003;</td></tr>
+						<tr class="redbg"><td>(0,2)</td><td>A'B'D'</td><td>&#10003;</td></tr>
+						<tr class="redbg"><td>(0,8)</td><td>B'C'D'</td><td>&#10003;</td></tr>
+						<tr class="yellowbg"><td>(1,5)</td><td>A'C'D</td><td>X</td></tr>
+						<tr class="yellowbg"><td>(1,9)</td><td>B'C'D</td><td>&#10003;</td></tr>
+						<tr class="yellowbg"><td>(2,6)</td><td>A'CD'</td><td>&#10003;</td></tr>
+						<tr class="yellowbg"><td>(2,10)</td><td>B'CD'</td><td>&#10003;</td></tr>
+						<tr class="yellowbg"><td>(8,9)</td><td>AB'C'</td><td>&#10003;</td></tr>
+						<tr class="yellowbg"><td>(8,10)</td><td>AB'D'</td><td>&#10003;</td></tr>
+						<tr class="bluebg"><td>(6,7)</td><td>A'BC</td><td>X</td></tr>
+						<tr class="bluebg"><td>(6,14)</td><td>BCD'</td><td>&#10003;</td></tr>
+						<tr class="bluebg"><td>(5,7)</td><td>A'BD</td><td>X</td></tr>
+						<tr class="bluebg"><td>(10,14)</td><td>ACD'</td><td>&#10003;</td></tr>
+					</table><p></p><i>N.B If there is an X in the last column then you would automatically add that to the result. Terms which have not been checked off are prime implicants.</i><p></p><br class="space"/>
+
+					<b>Matches For 2nd Table</b><p></p><span class="red">Red</span> and <span class="yellow">Yellow</span> Groups - (0,1,8,9) B'C'; (0,2,8,10) B'D'; (0,8,1,9) B'C'; (0,8,2,10) B'D'<br/><span class="yellow">Yellow</span> and <span class="blue">Blue</span> Groups - (2,6,10,14) CD'; (2,10,6,14) CD'<br/><p></p>Thus, based on the matches for the 2nd table, the result is: <b>A'C'D + A'BC + A'BD + B'C' + B'D' + CD'</b><p></p>
+					<i>3<sup>rd</sup> table</sup></i><table class="invisible white"><tr class="purplebg"><td></td><td>WXYZ</td><td>WXYZ</td><td>WXYZ</td><td>WXYZ</td><td>WXYZ</td><td>WXYZ</td><td>WXYZ</td><td>WXYZ</td><td>WXYZ</td><td>WXYZ</td></tr><tr class="orangebg"><td>A'C'D</td><td></td><td>X</td><td></td><td></td><td></td><td>X</td><td></td><td></td><td></td><td></td></tr><tr class="orangebg"><td>A'BC</td><td></td><td></td><td></td><td></td><td>X</td><td></td><td></td><td></td><td>X</td><td></td></tr><tr class="orangebg"><td>A'BD</td><td></td><td></td><td></td><td></td><td></td><td>&#9633;</td><td></td><td></td><td>&#9633;</td><td></td></tr><tr class="orangebg"><td>B'C'</td><td>X</td><td>&#9633;</td><td></td><td>X</td><td></td><td></td><td>&#9679;</td><td></td><td></td><td></td></tr><tr class="orangebg"><td>B'D'</td><td>&#9633;</td><td></td><td>X</td><td>&#9633;</td><td></td><td></td><td></td><td>X</td><td></td><td></td></tr><tr class="orangebg"><td>CD'</td><td></td><td></td><td>&#9633;</td><td></td><td>&#9633;</td><td></td><td></td><td>&#9633;</td><td></td><td>&#9679;</td></tr></table><p></p><br class="space"/>
+					Since, there is nothing else but 2 &#9633; in the A'BD row then that element would be included in the answer; However, there is also A'BC with nothing else but 2 Xs in that row and 2 Xs in the row A'C'D; so you basically choose between A'BD, A'C'D and A'BC to which you want to include in the answer. Therefore, with choosing A'BD. <p></p>
+					The final answer is: <b>'C' + CD' + A'BD</b>. As, there are &#9679; in the B'C' row and CD' row.
+				</div>
+
+				<div class="center2">
+					<h2 class="green">Example 2</h2><b>F(A,B,C,D) = &#931;m (0,1,2,3,5,7,8,10,12,13,15)</b>
+					<table class="invisible"><tr><td>0</td><td>0000</td><td>A'B'C'D'</td></tr><tr><td>1</td><td>0001</td><td>A'B'C'D</td></tr><tr><td>2</td><td>0010</td><td>A'B'CD'</td></tr><tr><td>3</td><td>0011</td><td>A'B'CD</td></tr><tr><td>5</td><td>0101</td><td>A'BC'D</td></tr><tr><td>7</td><td>0111</td><td>A'BCD</td></tr><tr><td>8</td><td>1000</td><td>AB'C'D'</td></tr><tr><td>10</td><td>1010</td><td>AB'C'D</td></tr><tr><td>12</td><td>1100</td><td>ABC'D'</td></tr><tr><td>13</td><td>1101</td><td>ABC'D</td></tr><tr><td>15</td><td>1111</td><td>ABCD</td></tr></table><p></p>
+					<i>1<sup>st</sup> table</sup></i><table class="invisible white space"><!--fairly lazy dont judge me--><style>td {padding: 6px;} </style><tr class="purplebg"><td></td><td class="bold">Index</td><td class="bold">A</td><td class="bold">C</td><td class="bold">B</td><td class="bold">D</td></tr><tr class="redbg"><td>A'B'C'D'</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr class="yellowbg"><td>A'B'C'D</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td></tr><tr class="yellowbg"><td>A'B'CD'</td><td>2</td><td>0</td><td>0</td><td>1</td><td>0</td></tr><tr class="yellowbg"><td>AB'C'D'</td><td>8</td><td>1</td><td>0</td><td>0</td><td>0</td></tr><tr class="bluebg"><td>A'B'CD</td><td>3</td><td>0</td><td>0</td><td>1</td><td>1</td></tr><tr class="bluebg"><td >A'BC'D</td><td>5</td><td>0</td><td>1</td><td>0</td><td>1</td></tr><tr class="bluebg"><td >AB'C'D</td><td>10</td><td>1</td><td>0</td><td>1</td><td>0</td></tr><tr class="bluebg"><td>ABC'D'</td><td>12</td><td>1</td><td>1</td><td>0</td><td>0</td></tr><tr class="greenbg"><td>A'BCD</td><td>7</td><td>0</td><td>1</td><td>1</td><td>1</td></tr><tr class="greenbg"><td>ABC'D</td><td>13</td><td>1</td><td>1</td><td>0</td><td>1</td></tr><tr class="orangebg"><td>ABCD</td><td>15</td><td>1</td><td>1</td><td>1</td><td>1</td></tr></table><p></p><br class="space"/>
+					<b>Matches For 1st Table</b><p></p><span class="red">Red</span> and <span class="yellow">Yellow</span> Groups - (0,1) A'B'C; (0,2) A'B'D'; (0,8) B'C'D'<br/><span class="yellow">Yellow</span> and <span class="blue">Blue</span> Groups - (1,3) A'B'D; (1,5) A'C'D; (2,3) A'B'C; (2,10) B'CD'; (8,10) AB'D'; (8,12) AC'D'<br/><span class="blue">Blue</span> and <span class="green">Green</span> Groups - (3,7) A'CD; (5,7) A'BD; (5,13) BC'D; (12,13) ABC'<br/><span class="green">Green</span> and <span class="orange">Orange</span> Groups - (7,15) BCD; (13,15) ABD<p></p><br class="space"/>
+					<i>2<sup>nd</sup> table</sup></i><table class="invisible white"><tr class="purplebg"><td>Pairs</td><td>Configuration</td><td></td></tr><tr class="redbg"><td>(0,1)</td><td>A'B'C'</td><td>&#10003;</td></tr><tr class="redbg"><td>(0,2)</td><td>A'B'D'</td><td>&#10003;</td></tr><tr class="redbg"><td>(0,8)</td><td>B'C'D'</td><td>&#10003;</td></tr><tr class="yellowbg"><td>(1,3)</td><td>A'B'D</td><td>&#10003;</td></tr><tr class="yellowbg"><td>(1,5)</td><td>A'C'D</td><td>&#10003;</td></tr><tr class="yellowbg"><td>(2,3)</td><td>A'B'C</td><td>&#10003;</td></tr><tr class="yellowbg"><td>(2,10)</td><td>B'CD'</td><td>&#10003;</td></tr><tr class="yellowbg"><td>(8,10)</td><td>AB'D'</td><td>&#10003;</td></tr><tr class="yellowbg"><td>(8,12)</td><td>AC'D'</td><td>X</td></tr><tr class="bluebg"><td>(3,7)</td><td>A'CD</td><td>&#10003;</td></tr><tr class="bluebg"><td>(5,7)</td><td>A'BD</td><td>&#10003;</td></tr><tr class="bluebg"><td>(5,13)</td><td>BC'D</td><td>&#10003;</td></tr><tr class="bluebg"><td>(12,13)</td><td>ABC'</td><td>X</td></tr><tr class="greenbg"><td>(7,15)</td><td>BCD</td><td>&#10003;</td></tr><tr class="greenbg"><td>(13,15)</td><td>ABD</td><td>&#10003;</td></tr></table><p></p>
+					<b>Matches For 2nd Table</b><p></p><span class="red">Red</span> and <span class="yellow">Yellow</span> Groups - (0,1,2,3) A'B'; (0,2,1,3) A'B'; (0,2,8,10) B'D'; (0,8,2,10) B'D'<br/><span class="yellow">Yellow</span> and <span class="blue">Blue</span> Groups - (1,3,5,7) A'D; (1,5,3,7) A'D<br/><span class="blue">Blue</span> and <span class="green">Green</span> Groups - (5,7,13,15) BD; (5,13,7,15) BD<p></p>
+					Therefore, for the 2nd table, the result is: <b>AC'D' + ABC' + A'B' + B'D' + A'D + BD</b><p></p>
+					<i>3<sup>rd</sup> table</sup></i><table class="invisible white"><tr class="purplebg"><td></td><td>A'B'C'D'</td><td>A'B'C'D</td><td>A'B'CD'</td><td>AB'C'D'</td><td>A'B'CD</td><td>A'BC'D</td><td>AB'CD'</td><td>ABC'D'</td><td>A'BCD</td><td>ABC'D</td><td>ABCD</td></tr><tr class="orangebg"><td>A’C’D</td><td></td><td></td><td></td><td>X</td><td></td><td></td><td></td><td>X</td><td></td><td></td><td></td></tr><tr class="orangebg"><td>A’BC</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>&#9633;</td><td></td><td>X</td><td></td></tr><tr class="orangebg"><td>A’B’</td><td>X</td><td>X</td><td>X</td><td></td><td>X</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr class="orangebg"><td>B’D’</td><td>&#9633;</td><td></td><td>&#9633;</td><td>&#9633;</td><td></td><td></td><td>&#9679;</td><td></td><td></td><td></td><td></td></tr><tr class="orangebg"><td>A’D</td><td></td><td>&#9633;</td><td></td><td></td><td>&#9633;</td><td>X</td><td></td><td></td><td>X</td><td></td><td></td></tr><tr class="orangebg"><td>BD</td><td></td><td></td><td></td><td></td><td></td><td>&#9633;</td><td></td><td></td><td>&#9633;</td><td>&#9633;</td><td>&#9679;</td></tr></table><p></p>
+					&#9679; - in rows with B’D’ and BD<br>Lone X’s in rows AC’D’ and A’B<p></p>Thus, the final result based on the 3rd Table would be <b>AC’D’ + A’B’ + B’D’ + BD</b>.
+				</div>
             </div>
 			<footer><span class="footnote">No one who is willing will be left behind</span></footer>
 		</div>
