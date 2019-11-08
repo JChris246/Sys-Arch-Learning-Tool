@@ -42,7 +42,7 @@ h2::after {
 	position:relative;
 }
 
-#main, #law_main, #kmain{
+#main, #law_main, #kmain, #qmain{
 	padding-bottom:20px;
  	line-height: 1.4;
 	background-size: cover;
@@ -69,6 +69,19 @@ h2::after {
 #kmain::after {
 	content: "";
 	background: url('../resources/de1.png');
+	opacity: 0.28;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	background-attachment: fixed;
+	z-index: -1;
+}
+
+#qmain::after {
+	content: "";
+	background: url('../resources/tabexample4.gif');
 	opacity: 0.28;
 	top: 0;
 	left: 0;
@@ -191,7 +204,7 @@ a.subjectlink {
 	float:right;
 }
 
-a.subjectlink:visited {
+a.subjectlink:visited, a.novisit {
 	color:blue;
 }
 

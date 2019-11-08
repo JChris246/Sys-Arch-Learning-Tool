@@ -8,7 +8,6 @@
 		<link rel="stylesheet" href="../css/colors.css">
 		<link rel="stylesheet" href="../css/main%20style.css">
 		<link rel="stylesheet" href="../css/panels.css">
-		<link rel="stylesheet" href="../css/buttons.css">
 		<link rel="stylesheet" href="../css/tables.css">
 	</head>
 	<body>
@@ -20,6 +19,15 @@
 					<p class="block"><b>Why Use Boolean Algebra</b><br class="space"/>Boolean laws are a set of rules/laws that were standardised to help reduce the number of logic gates needed to perform a particular logic operation. These rules called theorems, are known commonly as the <b>Laws of Boolean Algebra</b>.</p>
 					<p class="block"><b>How Does Boolean Algebra work</b><br class="space"/>The variables used in Boolean Algebra are bistable ie only 2 possible combinations: 0 or 1. However a boolean expression can have an infinite number of variables all labelled individually to represent inputs to the expression, For example, variables A, B, C etc, can give us a logical expression of A + B = C, but each variable can <b>ONLY</b> be a 0 or a 1.</p>
 					<p class="block">The individual laws of Boolean, rules and theorems for Boolean Algebra are given in the table to the right</p>
+					<div class="block"><h2 class="green">Example</h2>
+						<table class="steps">
+							<td class="top">(a * b * ~c) + (a * b * c)</td><tdclass="top"></td></tr>
+							<td class="steps">a * ((b * ~c) + (b * c))</td><td class="steps">Distributive law</td></tr>
+							<td class="steps">(a * b) * (~c + c)</td><td class="steps">Distributive law</td></tr>
+							<td class="steps">(a * b) * 1</td><td class="steps">Complement property</td></tr>
+							<td class="steps">a * b</td><td class="steps">Identity law</td></tr>
+						</table>
+					</div>
 				</div>
 				<div id="right">
 					<table class="striped">

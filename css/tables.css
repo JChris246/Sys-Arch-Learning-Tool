@@ -9,7 +9,7 @@ table.striped {
 td.striped, th.striped {
   border-right: 1px solid #dddddd;
   border-left: 1px solid #dddddd;
-  padding: 8px;
+  padding: 11px;
 }
 
 table.compare {
@@ -26,6 +26,16 @@ table.gateTable {
     width: 45%;
     display: inline-table;
     margin-right:40px;
+}
+
+table.invisible {
+    width:45%;
+    padding:10px;
+    padding-left: 30px;
+}
+
+td.bold {
+    font-weight: bold;
 }
 
 td.blank {
