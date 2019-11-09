@@ -11,14 +11,24 @@ const database = [
 	{q: '~a~bc+ ~ab~c + a~b~c + a~bc + abc', a: 'ac + a~b + b~a~c + c~b', t: [['a', 'b', 'c', 'output'], ['0', '0', '0', '0'], ['0', '0', '1', '1'], ['0', '1', '0', '1'], ['0', '1', '1', '0'], ['1', '0', '0', '1'], ['1', '0', '1', '1'], ['1', '1', '0', '0'], ['1', '1', '1', '1']]}];
 
 var complete = []; //keep track of questions asked already
-var count = 0;
+var count = 0, correct = 0;
 
 function init() {
 	for(i = 0; i < database.length; i++)
 		complete.push(false);
 }
 
-function createPad() {
+function createScore() {
+	let pad = createPad("Your final results");
+
+	let score = document.createElement("p");
+	score.innerHTML = correct + " / " + database.length;
+	score.classList.add(correct / database.length * 100 < 50 ? "red" : "green");
+
+	pad.appendChild(score);
+}
+
+function createPad(title) {
 	//if previous pad existed, remove it
 	let temp = document.querySelector("div.push_center");
 	if (temp)
@@ -27,7 +37,7 @@ function createPad() {
 	let header = document.createElement("span");
 	header.classList.add("header");
 	header.classList.add("greenbg");
-	header.innerHTML = "Simplify the following boolean expression";
+	header.innerHTML = title;
 
 	let div = document.createElement("div");
 	div.classList.add("push_center");
@@ -44,7 +54,7 @@ function convert(raw) {
 	raw = raw.replace(new RegExp("v|or|[|]", 'g'), "[+]");
 	raw = raw.replace(new RegExp("[.]|[*][&]", 'g'), "");
 	raw = raw.replace(new RegExp("\s+", 'g'), "");
-	return raw.toLowerCase();
+	return raw.toLowerCase().trim();
 }
 
 function createTable(values) {
@@ -77,12 +87,13 @@ function createEnterBtn(attempt, ans, table) {
 
 		give button to advance to next question*/
 
+		//translate user symbols (if not used the same as ans)
+		let cleanAttempt = convert(attempt.value);
+
 		if (attempt.value.length == 0) {
 			alert("You should probably enter a value as an attempt");
 		} else {
-			let header = createPad().querySelector("span.header");
-			//translate user symbols (if not used the same as ans)
-			let cleanAttempt = convert(attempt.value);
+			let header = createPad("").querySelector("span.header");
 
 			//make a container to put next button, correct ans (if wrong) and truth table in
 			container = document.createElement("div");
@@ -92,6 +103,7 @@ function createEnterBtn(attempt, ans, table) {
 
 			if (cleanAttempt == ans) {
 				header.innerHTML = "Your answer is correct";
+				correct++;
 			} else {
 				header.innerHTML = "Your answer is incorrect";
 				header.classList.remove("greenbg");
@@ -138,11 +150,10 @@ function getRandomIndex() {
 function createQuestion() {
 	//if u have asked database.length times, this means u are out of questions
 	//(because questions are only asked once although random)
-	if (count >= database.length) {
-		alert("We have no more questions to ask");
-		//probably display a total of correct ans screen here
-	} else {
-		let center = createPad();
+	if (count >= database.length)
+		createScore();
+	else {
+		let center = createPad("Simplify the following boolean expression");
 
 		let ansBox = document.createElement("div");
 		let ans = document.createElement("input");
@@ -153,9 +164,8 @@ function createQuestion() {
 		let btn = createEnterBtn(ans, database[i].a, database[i].t);
 
 		let question = document.createElement("p");
-		question.classList.add("description");
-
 		question.innerHTML = database[i].q;
+
 		count++;
 
 		ansBox.appendChild(ans);

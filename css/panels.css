@@ -60,8 +60,15 @@ div.center2 {
 }
 
 div.push_center {
-	color:#665;
 	width: 65%;
+}
+
+div.push_center2 {
+	width: 75%;
+}
+
+div.push_center, div.push_center2 {
+	color:#665;
 	border-radius: 10px;
 	padding:20px 20px 10px 20px;
 	box-shadow:0 5px 10px 0 rgba(0,0,0,.19);
@@ -69,13 +76,13 @@ div.push_center {
 }
 
 @media only screen and (max-height: 800px) {
-	div.push_center {
+	div.push_center, div.push_center2 {
 		margin: 80px auto 280px;
 	}
 }
 
 @media only screen and (min-height: 800px) {
-	div.push_center {
+	div.push_center, div.push_center2 {
 		margin: 100px auto 460px;
 	}
 }
