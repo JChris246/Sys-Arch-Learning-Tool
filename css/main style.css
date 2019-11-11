@@ -93,11 +93,6 @@ h2::after {
 	z-index: -1;
 }
 
-#search {
-	padding-left:15px;
-	display:inline-block;
-}
-
 #navbar {
 	padding:10px;
 	background-color:#52b700;
@@ -117,14 +112,8 @@ br.space {
 	float:right;
 }
 
-.searchBox{
-    color: #3f3f3f;
-    border: none;   
-    border-bottom: 1px solid #ddd;
-    box-shadow: none;
-    font-size: 12px;
-    height: 20px;
-    padding: 6px 25px 6px 6px;
+.text_right {
+	text-align: right;
 }
 
 .row {
@@ -147,18 +136,6 @@ br.space {
 	padding:15px 20px 10px 20px;
 	box-shadow:0 5px 10px 0 rgba(0,0,0,.19);
 	background-color: white;	
-}
-
-.registerBox {
-	color:#665;
-	display:inline-block;
-	margin-top:80px;
-	margin-bottom:35px;
-	position:relative;
-	width:44.359%;
-	border-radius: 5px;
-	padding:20px 20px 30px 20px;
-	box-shadow:0 5px 10px 0 rgba(0,0,0,.19);	
 }
 
 .tag {
@@ -208,16 +185,6 @@ a.subjectlink:visited, a.novisit {
 	color:blue;
 }
 
-a.register {
-	text-decoration:none;
-	text-align:center;
-	border-radius: 15px;
-	width:100%;
-	display:block;
-	padding: 5px 0px 5px 0px;
-	margin-top:8px;
-}
-
 a.subjectitem {
 	text-decoration: none;
 	color:#665;
@@ -245,17 +212,6 @@ div.subjectlist {
 	border-top: 1px solid #e1e1e5;
 	padding-top: 5px;
 	margin:0;
-}
-
-span.register {
-	margin-bottom:25px;
-	text-align:center;
-	display:block;
-	padding-top:15px;
-}
-
-span.instructions {
-	font-family:  proxima-nova, sans-serif, Calibri, arial, helvetica;
 }
 
 footer {

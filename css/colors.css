@@ -79,23 +79,3 @@
 	background-color:#e9681b;
 }
 /*end bg colors*/
-
-/*bg hover colors*/
-a.register.bluebg:hover, a.register.blueBdr:hover{
-	background-color:#51BACA;
-}
-
-a.register.redbg:hover, a.register.redBdr:hover{
-	background-color:#DE684D;
-}
-
-a.register.blueBdr:hover {
-	color:#FFF;
-	border:1px solid #51BACA;
-}
-
-a.register.redBdr:hover {
-	color:#FFF;
-	border:1px solid #DE684D;
-}
-/*bg hover colors*/
