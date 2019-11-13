@@ -43,7 +43,7 @@ h2::after {
 }
 
 #main, #law_main, #kmain, #qmain{
-	padding-bottom:20px;
+	padding-bottom:30px;
  	line-height: 1.4;
 	background-size: cover;
 	padding-top: 45px;
@@ -217,7 +217,7 @@ div.subjectlist {
 footer {
 	color:#fff;
 	background-color:#000;
-	padding-top:24px;
+	padding-top:30px;
 	padding-bottom:24px;
 	height:20px;
 	text-align:center;
