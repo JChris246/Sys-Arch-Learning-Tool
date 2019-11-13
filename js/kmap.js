@@ -1,0 +1,8 @@
+const database = [
+	{q: 'A<span class="barred">BC</span> + A<span class="barred">B</spanC + AB<span class="barred">C</span> + ABC', a: 'C', t: [['a', 'b', 'c', 'output'], ['0', '0', '0', '0'], ['0', '0', '1', '0'], ['0', '1', '0', '0'], ['0', '1', '1', '0'], ['1', '0', '0', '1'], ['1', '0', '1', '1'], ['1', '1', '0', '1'], ['1', '1', '1', '1']]},
+	{q: '<span class="barred">AB</span>C<span class="barred">D</span> + <span class="barred">AB</span>CD + <span class="barred">A</span>BC<span class="barred">D</span> + <span class="barred">A</span>BCD + A<span class="barred">B</span>C<span class="barred">D</span> + A<span class="barred">B</span>CD + ABC<span class="barred">D</span> + ABCD', a: 'A~B + ~AB', t: [['a', 'b', 'c', 'd', 'output'], ['0', '0', '0', '0', '0'], ['0', '0', '0', '1', '0'], ['0', '0', '1', '0', '1'], ['0', '0', '1', '1', '1'],['0', '1', '0', '0', '0'], ['0', '1', '0', '1', '0'], ['0', '1', '1', '0', '1'], ['0', '1', '1', '1', '1'], ['1', '0', '0', '0', '0'], ['1', '0', '0', '1', '0'], ['1', '0', '1', '0', '1'], ['1', '0', '1', '1', '1'], ['1', '1', '0', '0', '0'], ['1', '1', '0', '1', '0'], ['1', '1', '1', '0', '1'], ['1', '1', '1', '1', '1']]},
+	{q: '<span class="barred">A</span>B<span class="barred">C</span> + <span class="barred">A</span>BC + A<span class="barred">BC</span> + A<span class="barred">B</span>C', a: 'A', t: [['a', 'b', 'c', 'output'], ['0', '0', '0', '0'], ['0', '0', '1', '0'], ['0', '1', '0', '1'], ['0', '1', '1', '1'], ['1', '0', '0', '1'], ['1', '0', '1', '1'], ['1', '1', '0', '0'],['1', '1', '1', '0']]}];
+
+function createQuestion() {
+	makeQuestion("Populate Karnaugh Maps from the following truth tables, then use grouping to simplify (use ~ to represent a bar)", "kmain");
+}

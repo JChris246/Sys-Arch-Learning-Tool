@@ -36,6 +36,7 @@ span.header {
 
 span.correction {
 	padding: 5px;
+	margin-top:30px;
 	font-size: 14px;
 	font-weight: bold;
 	display: block;
@@ -67,7 +68,7 @@ div.push_center2 {
 	width: 75%;
 }
 
-div.push_center, div.push_center2 {
+div.push_center {
 	color:#665;
 	border-radius: 10px;
 	padding:20px 20px 10px 20px;
@@ -76,13 +77,13 @@ div.push_center, div.push_center2 {
 }
 
 @media only screen and (max-height: 800px) {
-	div.push_center, div.push_center2 {
+	div.push_center {
 		margin: 80px auto 280px;
 	}
 }
 
 @media only screen and (min-height: 800px) {
-	div.push_center, div.push_center2 {
+	div.push_center {
 		margin: 100px auto 460px;
 	}
 }
