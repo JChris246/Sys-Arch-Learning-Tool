@@ -117,7 +117,8 @@ br.space {
 }
 
 .row {
-	margin: 180px auto;
+	margin: 200px auto;
+	margin-bottom: 240px;
 	width: 88%
 }
 
